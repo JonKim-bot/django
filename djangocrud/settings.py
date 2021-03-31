@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '&zb^g%k8#cef+6rg()*d#zj%to5n4o=bp_(r8gh+@2i!vw$51a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djangoblogboitan.herokuapp.com']
 
 
 # Application definition
