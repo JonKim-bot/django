@@ -27,7 +27,8 @@ SECRET_KEY = '&zb^g%k8#cef+6rg()*d#zj%to5n4o=bp_(r8gh+@2i!vw$51a'
 # DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = ['djangoblogboitan.herokuapp.com']
+ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -84,11 +85,12 @@ DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
-        'ENGINE': 'django.db.backends.mysql',
+        # 'ENGINE': 'django.db.backends.mysql',
         # 'NAME': BASE_DIR / 'db.mysql',
-        'USER': 'root',
-        'NAME': 'crm',
-        'PASSWORD' : 'password',
+        'HOST' : '194.59.164.64',
+        'USER': 'u615769276_msjaya',
+        'NAME': 'u615769276_msjaya',
+        'PASSWORD' : 'Walaodiam123',
 
 
     }
