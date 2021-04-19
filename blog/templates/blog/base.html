@@ -15,8 +15,9 @@
     {% if title %}
         <title>Django Blog - {{ title }}</title>
     {% else %}
+    
         <title>Django Blog</title>
-    {% endif %}
+    {% endif %} 
 </head>
 <body>
     <header class="site-header">
@@ -48,6 +49,9 @@
         <div class="col-md-4">
           <div class="content-section">
             <h3>Our Sidebar</h3>
+            {% block sidebar %}{% endblock %}
+            {% include './test_block.html' %}
+
             <p class='text-muted'>You can put any information here you'd like.
               <ul class="list-group">
                 <li class="list-group-item list-group-item-light">Latest Posts</li>
@@ -68,3 +72,4 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
+
