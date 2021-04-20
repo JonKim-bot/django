@@ -24,8 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '&zb^g%k8#cef+6rg()*d#zj%to5n4o=bp_(r8gh+@2i!vw$51a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -37,6 +37,8 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'blog.apps.BlogConfig',
+    'users.apps.UsersConfig',
+    'crispy_forms',
     # 'firstdjango.apps.FirstdjangoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -140,3 +142,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'blog-home'
+LOGIN_URL = 'login'
