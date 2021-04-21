@@ -13,8 +13,9 @@ class UserRegisterForm(UserCreationForm):
 
 
 class UserUpdateForm(forms.ModelForm):
+    # django self contained library
     email = forms.EmailField()
-
+# creating user form
     class Meta:
         model = User
         fields = ['username', 'email']

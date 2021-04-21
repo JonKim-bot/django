@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
-
+# import from from object to show
 
 def register(request):
     if request.method == 'POST':
@@ -24,9 +24,11 @@ def profile(request):
         p_form = ProfileUpdateForm(request.POST,
                                    request.FILES,
                                    instance=request.user.profile)
+                                #    save form info if request
         if u_form.is_valid() and p_form.is_valid():
             u_form.save()
             p_form.save()
+            # showing message
             messages.success(request, f'Your account has been updated!')
             return redirect('profile')
 
